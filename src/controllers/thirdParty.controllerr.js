@@ -1,4 +1,4 @@
-const passport = require("passport");
+/* const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 
 passport.use(
@@ -22,4 +22,4 @@ passport.serializeUser(function (user, done) {
 });
 passport.deserializeUser(function (user, done) {
   done(null, user);
-});
+}); */

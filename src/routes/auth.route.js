@@ -7,7 +7,8 @@ const {
   refreshToken,
   logout
 } = require("../controllers/auth.controller");
-require("../controllers/thirdParty.controllerr");
+
+//require("../controllers/thirdParty.controllerr");
 
 const auth = express.Router();
 
@@ -15,7 +16,7 @@ auth.post("/signup", signUp);
 
 auth.post("/login", login);
 
-auth.get('/success', (req, res, next)=>{
+/* auth.get('/success', (req, res, next)=>{
   res.status(200).json({msg: `logged in successfully`})
 }
 )
@@ -28,7 +29,7 @@ auth.get("/google/callback", passport.authenticate('google', {failureRedirect: '
 function(req,res){
   res.redirect('/success')
 }
-);
+); */
 
 auth.get("/refresh", refreshToken);
 auth.get("/logout", logout);
